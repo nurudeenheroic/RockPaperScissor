@@ -75,3 +75,23 @@ function gameRound(humanChoice,computerChoice) {
     }
 
 }
+
+function gamePlay() {
+    for (let i = 0; i < 5; i++) {
+        alert (`game #${i + 1}`);
+
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection,computerSelection);
+    }
+
+    if (humanScore > computerScore) {
+        alert("Well done. You are the Champ!!!")
+    }
+    else if (humanScore < computerScore) {
+        alert("You lost. Better luck next Time!")
+    }
+    else {
+        alert ("It's a draw. You can do better!")
+    }
+}
