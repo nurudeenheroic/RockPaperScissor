@@ -1,6 +1,6 @@
 let humanScore = 0, computerScore = 0;
 
-function getComputerScore() {
+function getComputerChoice() {
     let computerChoice = Math.floor(Math.random()*3);
 
     switch (computerChoice) {
@@ -12,3 +12,22 @@ function getComputerScore() {
             return 'Sccissor';
     }
 }
+
+function getHumanChoice() {
+    let humanChoice = prompt("You are required to enter your choice Rock, Paper or Scissor");
+
+    if ("Rock") {
+        return "Rock";
+    }
+    else if ("Paper") {
+        return "Paper";
+    }
+    else if ("Scissor") {
+        return "Scissor";
+    }
+    else {
+        alert ('Invalid input');
+    }
+}
+
+
