@@ -95,3 +95,4 @@ function gamePlay() {
         alert ("It's a draw. You can do better!")
     }
 }
+gamePlay();
