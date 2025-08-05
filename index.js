@@ -1,7 +1,7 @@
 let humanScore = 0, computerScore = 0;
 
 function getComputerChoice() {
-    let computerChoice = Math.floor(Math.random()*3);
+    let computerChoice = Math.floor(Math.random() * 3);
 
     switch (computerChoice) {
         case 0: 
@@ -14,23 +14,19 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let humanChoice = prompt("You are required to enter your choice Rock, Paper or Scissor");
+    let humanChoice = prompt("You are required to enter your choice Rock, Paper or Scissor for the Game. Let's Go", '').toLowerCase();
 
-    if ("Rock") {
+    switch (humanChoice) {
+        case "rock":
         return "Rock";
-    }
-    else if ("Paper") {
-        return "Paper";
-    }
-    else if ("Scissor") {
-        return "Scissor";
-    }
-    else {
-        alert ('Invalid input');
+        case "paper":
+            return "Paper";
+        case "scissor":
+            return "Scissor";
     }
 }
 
-function gameRound(humanChoice,computerChoice) {
+function playRound(humanChoice,computerChoice) {
     if (humanChoice === "Rock" && computerChoice === "Rock") {
         alert ("Rock vs Rock -> It's a tie!");
         console.log ("Rock vs Rock -> It's a tie!");
@@ -68,7 +64,7 @@ function gameRound(humanChoice,computerChoice) {
         console.log ("Scissor vs Rock -> You lost this round!");
         computerScore++ ;
     }
-    else {
+    else if(humanChoice === "Scissor" && computerChoice === "Paper") {
         alert ("Scissor vs Paper -> You won this round!");
         console.log ("Scissor vs Paper -> You won this round!");
         humanScore++ ;
